@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Rubik-Regular";
+  src: url(../assets/fonts/Rubik-Regular.ttf);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto-Regular", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: var(--secondary-color);
+}
+
+main {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--tertiary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.components {
+  padding: var(--spacing-medium) 0;
+  width: 90%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+}
+
+.components__list-container {
+  flex-basis: 25%;
+}
+
+.components__show-container {
+  flex-grow: 1;
+  color: var(--text-color-light);
+}
+
+.components__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-xsmall);
+}
+
+.components__list-item button {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 10px;
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  padding: var(--spacing-xsmall);
+  background-color: var(--primary-color);
+  transform: scale(1);
+  transition: background-color 0.3s linear, transform 0.3s linear;
+}
+
+.components__list-item button:hover {
+  background-color: var(--hover-color);
+  transform: scale(0.9);
+  transition: background-color 0.2s linear, transform 0.2s linear;
+}
