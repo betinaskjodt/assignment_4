@@ -6,9 +6,57 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Design System with Interactive Components</title>
   </head>
   <body>
+    <header></header>
+
+    <main>
+      <section class="components">
+        <div class="components__list-container">
+          <ul class="components__list">
+            <li class="components__list-item components__list-item--active">
+              <button>Buttons</button>
+            </li>
+            <li class="components__list-item"><button>Alerts</button></li>
+            <li class="components__list-item">
+              <button>Toggle Switch</button>
+            </li>
+            <li class="components__list-item"><button>Tooltips</button></li>
+            <li class="components__list-item"><button>Cards</button></li>
+            <li class="components__list-item"><button>Accordians</button></li>
+            <li class="components__list-item">
+              <button>Toast Notification</button>
+            </li>
+            <li class="components__list-item"><button>Badger</button></li>
+          </ul>
+        </div>
+        <div class="components__show-container">
+          <!-- buttons components -->
+          <div class="components__buttons components__item--active"></div>
+
+          <!-- allerts components -->
+          <div class="components__alerts"></div>
+
+          <!-- tooltips components -->
+          <div class="components__tooltips"></div>
+
+          <!-- cards components -->
+          <div class="components__cards"></div>
+
+          <!-- accordians components -->
+          <div class="components__acordians"></div>
+
+          <!-- toast notiification components -->
+          <div class="components__toast"></div>
+
+          <!-- badger components -->
+          <div class="components__badger"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
     <script src="./js/app.js"></script>
   </body>
 </html>
