@@ -1,6 +1,21 @@
 const listButtons = document.querySelectorAll(".components__list-btn");
 const componentsContainers = document.querySelectorAll(".components__item");
 
+const updateDisplay = (index) => {
+  const displayComponent = componentsContainers[index];
+
+  switch (index) {
+    case 0:
+      buttonComponent();
+      break;
+
+    default:
+      console.log("not working");
+
+      break;
+  }
+};
+
 listButtons.forEach((button, index) => {
   button.addEventListener("click", (e) => {
     componentsContainers.forEach((container) => {
@@ -14,12 +29,36 @@ listButtons.forEach((button, index) => {
     e.target.classList.add("components__list-btn--active");
     componentsContainers[index].classList.add("components__item--active");
   });
+  updateDisplay();
 });
 
-const updateDisplay = () => {};
+const buttonComponent = () => {
+  const states = ["dedault", "hover", "disabled", "active"];
+
+  states.forEach((state) => {
+    const stateContainer = document.createElement("div");
+    stateContainer.classList.add(`components__${state}-container`);
+
+    const stateTitle = document.createElement("h2");
+    stateTitle.classList.add(`components__${state}-title`);
+    stateTitle.textContent = `Button displayed in ${state} State`;
+
+    const stateButton = document.createElement("button");
+    stateButton.classList.add(`components__${state}-btn`);
+    stateButton.textContent = "click!";
+
+    if (state === "disabled") {
+      stateButton.disabled = true;
+    }
+
+    stateContainer.append(stateTitle, stateButton);
+  });
+  const buttonsContainer = document.querySelector(".components__buttons");
+  buttonsContainer.append(stateContainer);
+};
 
 // const showButtonComponents = () => {
-//   const buttonsContainer = document.querySelector(".components__buttons");
+//
 
 //   const deafultButtonContainer = document.createElement("div");
 //   deafultButtonContainer.classList.add("components__deafault-container");
