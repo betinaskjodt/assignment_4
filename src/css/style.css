@@ -57,7 +57,7 @@ main {
   gap: var(--spacing-xsmall);
 }
 
-.components__list-item button {
+.components__list-btn {
   width: 10rem;
   height: 4rem;
   border-radius: 10px;
@@ -68,7 +68,7 @@ main {
   transition: background-color 0.5s linear;
 }
 
-.components__list-item button:hover {
+.components__list-btn:hover {
   background-color: var(--hover-color);
   transition: background-color 0.5s linear;
 }
@@ -84,4 +84,5 @@ main {
 
 .components__item--active {
   display: block;
+  height: 100%;
 }

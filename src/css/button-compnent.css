@@ -1,0 +1,43 @@
+.components__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.components__dedault-container,
+.components__hover-container,
+.components__disabled-container,
+.components__active-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-xlarge);
+  border: 8px double var(--text-color-light);
+}
+
+.components__dedault-btn,
+.components__hover-btn,
+.components__disabled-btn,
+.components__active-btn {
+  width: 90px;
+  height: 50px;
+}
+
+.components__hover-btn,
+.components__disabled-btn,
+.components__active-btn {
+  border-radius: 20px;
+  font-size: var(--font-size-medium);
+  background-color: var(--primary-color);
+}
+
+.components__hover-btn:hover {
+  background-color: var(--hover-color);
+  box-shadow: rgba(255, 255, 255, 0.389) 0px 5px 10px;
+  transition: background-color 0.5s linear, box-shadow 0.5s linear;
+}
+
+.components__active-btn:active {
+  background-color: var(--hover-color);
+}

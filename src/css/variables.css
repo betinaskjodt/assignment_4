@@ -1,13 +1,14 @@
 :root {
-  --primary-color: #edf7f6;
-  --secondary-color: #190933;
-  --tertiary-color: #03256c;
+  --primary-color: #fbfbff;
+  --secondary-color: #03256c;
+  --tertiary-color: #01baef;
   --quaternary-color: ;
 
   --text-color-light: #f8f8f8;
   --text-color-dark: #353831;
+  --text-color-drark-gray: #1d1e18;
 
-  --hover-color: #bcddda;
+  --hover-color: #70cad1;
 
   --alert-color: #e63b2e;
 
