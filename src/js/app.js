@@ -5,31 +5,59 @@ const buttonComponent = () => {
   const states = ["dedault", "hover", "disabled", "active"];
 
   states.forEach((state) => {
-    const stateContainer = document.createElement("div");
-    stateContainer.classList.add(`components__${state}-container`);
+    const buttonContainer = document.createElement("div");
+    buttonContainer.classList.add(`components__${state}-container`);
 
-    const stateTitle = document.createElement("h2");
-    stateTitle.classList.add(`components__${state}-title`);
-    stateTitle.textContent = `Button displayed in ${state} State`;
+    const buttonTitle = document.createElement("h2");
+    buttonTitle.classList.add(`components__${state}-title`);
+    buttonTitle.textContent = `Button displayed in ${state} State`;
 
-    const stateButton = document.createElement("button");
-    stateButton.classList.add(`components__${state}-btn`);
-    stateButton.textContent = "click!";
+    const buttonElements = document.createElement("button");
+    buttonElements.classList.add(`components__${state}-btn`);
+    buttonElements.textContent = "click!";
 
     if (state === "disabled") {
-      stateButton.disabled = true;
+      buttonElements.disabled = true;
     }
 
-    stateContainer.append(stateTitle, stateButton);
+    buttonContainer.append(buttonTitle, buttonElements);
     const buttonsContainer = document.querySelector(".components__buttons");
-    buttonsContainer.append(stateContainer);
+    buttonsContainer.append(buttonContainer);
   });
 };
 
-const allertComponent = () => {};
+const allertComponent = () => {
+  const states = ["Success", "Warning", "Error", "Info"];
+
+  states.forEach((state) => {
+    const alertContainer = document.createElement("div");
+    alertContainer.classList.add(`components__${state}-container`);
+
+    const alertTtile = document.createElement("h2");
+    alertTtile.classList.add(`components__${state}-title`);
+    alertTtile.textContent = `Alert displayed in ${state} state:`;
+
+    const alertElement = document.createElement("div");
+    alertElement.classList.add(`components__${state}-alert`);
+    const alertMessage = document.createElement("p");
+    alertMessage.textContent = `this is an example of ${state} alert`;
+
+    alertContainer.append(alertTtile, alertElement);
+    alertElement.appendChild(alertMessage);
+
+    const alertsConatiner = document.querySelector(".components__alerts");
+    alertsConatiner.append(alertContainer);
+    // const alertCloseButton = document.createElement("span");
+    // alertElement.appendChild(alertCloseButton);
+  });
+};
 
 const updateDisplay = (index) => {
-  const displayComponent = componentsContainers[index];
+  componentsContainers.forEach((container) => {
+    container.textContent = "";
+  });
+
+  let displayComponent = componentsContainers[index];
 
   switch (index) {
     case 0:
@@ -59,8 +87,9 @@ listButtons.forEach((button, index) => {
 
     e.target.classList.add("components__list-btn--active");
     componentsContainers[index].classList.add("components__item--active");
+
+    updateDisplay(index);
   });
-  updateDisplay(index);
 });
 
 // const showButtonComponents = () => {
@@ -97,7 +126,7 @@ listButtons.forEach((button, index) => {
 //   );
 // };
 
-// const alertsConatiner = document.querySelector(".components__alerts");
+//
 // const togglesConatiner = document.querySelector(".components__toggle-switch");
 // const tooltipsContainer = document.querySelector(".components__tooltips");
 // const cardsContainer = document.querySelector(".components__cards");
