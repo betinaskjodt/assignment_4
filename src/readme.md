@@ -12,3 +12,5 @@ the GitHub repository, and link for the Netlify deployment).
 
 kilder:
 https://kristiania.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4a078d3-98bf-4bd3-aea8-b22e01050ebc
+
+https://www.w3schools.com/howto/howto_js_alert.asp
