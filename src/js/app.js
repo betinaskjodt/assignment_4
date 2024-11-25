@@ -31,24 +31,34 @@ const allertComponent = () => {
 
   states.forEach((state) => {
     const alertContainer = document.createElement("div");
-    alertContainer.classList.add(`components__${state}-container`);
+    alertContainer.classList.add(
+      `components__${state.toLowerCase()}-container`
+    );
 
     const alertTtile = document.createElement("h2");
-    alertTtile.classList.add(`components__${state}-title`);
+    alertTtile.classList.add(`components__${state.toLowerCase()}-title`);
     alertTtile.textContent = `Alert displayed in ${state} state:`;
 
     const alertElement = document.createElement("div");
-    alertElement.classList.add(`components__${state}-alert`);
+    alertElement.classList.add(`components__${state.toLowerCase()}-alert`);
     const alertMessage = document.createElement("p");
-    alertMessage.textContent = `this is an example of ${state} alert`;
+    alertMessage.textContent = `This is an example of ${state} alert`;
+    const alertCloseButton = document.createElement("span");
+    alertCloseButton.classList.add(`components__alert-close-btn`);
+    alertCloseButton.textContent = "X";
+    alertCloseButton.addEventListener("click", () => {
+      alertElement.classList.add("fade-out");
+      setTimeout(() => alertElement.remove(), 2000);
+    });
 
     alertContainer.append(alertTtile, alertElement);
-    alertElement.appendChild(alertMessage);
+    alertElement.append(alertMessage, alertCloseButton);
 
     const alertsConatiner = document.querySelector(".components__alerts");
     alertsConatiner.append(alertContainer);
-    // const alertCloseButton = document.createElement("span");
-    // alertElement.appendChild(alertCloseButton);
+
+    if (state === "Success") {
+    }
   });
 };
 
