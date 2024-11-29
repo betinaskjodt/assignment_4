@@ -1,141 +1,163 @@
-const listButtons = document.querySelectorAll(".components__list-btn");
-const componentsContainers = document.querySelectorAll(".components__item");
+// const listButtons = document.querySelectorAll(".components__list-btn");
+// const componentsContainers = document.querySelectorAll(
+//   ".components__container"
+// );
+// const alertbutton = document.querySelectorAll(".alert-btn");
+// const alertElement = document.querySelectorAll(".component__alert");
 
-const buttonComponent = () => {
-  const states = ["dedault", "hover", "disabled", "active"];
+// // Handeling click event for list of buttons and display only the one componet at the time
+// listButtons.forEach((button, index) => {
+//   button.addEventListener("click", (e) => {
+//     componentsContainers.forEach((container) => {
+//       container.classList.remove("components__container--active");
+//     });
 
-  states.forEach((state) => {
-    const buttonContainer = document.createElement("div");
-    buttonContainer.classList.add(`components__${state}-container`);
+//     listButtons.forEach((button) => {
+//       button.classList.remove("components__list-btn--active");
+//     });
 
-    const buttonTitle = document.createElement("h2");
-    buttonTitle.classList.add(`components__${state}-title`);
-    buttonTitle.textContent = `Button displayed in ${state} State`;
+//     e.target.classList.add("components__list-btn--active");
+//     componentsContainers[index].classList.add("components__container--active");
+//   });
+// });
 
-    const buttonElements = document.createElement("button");
-    buttonElements.classList.add(`components__${state}-btn`);
-    buttonElements.textContent = "click!";
+// Handleling click event for alert message, make it disapear when you click on "X"
+// vil bare at clicket skal skje på den spesefikke boksen????
+// alertbutton.forEach((button, index) => {
+//   button.addEventListener("click", () => {
+//     alertElement.forEach((element) => {
+//       element.classList.add("fade-out");
+//       setTimeout(() => element[index].remove(), 1000);
+//     });
+//   });
+// });
 
-    if (state === "disabled") {
-      buttonElements.disabled = true;
-    }
+// const updateDisplay = (index) => {
+//   componentsContainers.forEach((container) => {
+//     container.textContent = "";
+//   });
 
-    buttonContainer.append(buttonTitle, buttonElements);
-    const buttonsContainer = document.querySelector(".components__buttons");
-    buttonsContainer.append(buttonContainer);
-  });
-};
+//   let displayComponent = componentsContainers[index];
 
-const allertComponent = () => {
-  const states = ["Success", "Warning", "Error", "Info"];
+//   if(){
 
-  states.forEach((state) => {
-    const alertContainer = document.createElement("div");
-    alertContainer.classList.add(
-      `components__${state.toLowerCase()}-container`
-    );
+//   }
 
-    const alertTtile = document.createElement("h2");
-    alertTtile.classList.add(`components__${state.toLowerCase()}-title`);
-    alertTtile.textContent = `Alert displayed in ${state} state:`;
+// switch (index) {
+//   case 0:
+//     showButtonComponents();
+//     break;
 
-    const alertElement = document.createElement("div");
-    alertElement.classList.add(`components__${state.toLowerCase()}-alert`);
-    const alertMessage = document.createElement("p");
-    alertMessage.textContent = `This is an example of ${state} alert`;
-    const alertCloseButton = document.createElement("span");
-    alertCloseButton.classList.add(`components__alert-close-btn`);
-    alertCloseButton.textContent = "X";
-    alertCloseButton.addEventListener("click", () => {
-      alertElement.classList.add("fade-out");
-      setTimeout(() => alertElement.remove(), 2000);
-    });
+//   case 1:
+//     showAlertComponents();
+//     break;
 
-    alertContainer.append(alertTtile, alertElement);
-    alertElement.append(alertMessage, alertCloseButton);
+//   case 2:
+//     showToggleSwitchComponents();
+//     break;
 
-    const alertsConatiner = document.querySelector(".components__alerts");
-    alertsConatiner.append(alertContainer);
+//   default:
+//     console.log("not working");
 
-    if (state === "Success") {
-    }
-  });
-};
-
-const updateDisplay = (index) => {
-  componentsContainers.forEach((container) => {
-    container.textContent = "";
-  });
-
-  let displayComponent = componentsContainers[index];
-
-  switch (index) {
-    case 0:
-      buttonComponent();
-      break;
-
-    case 1:
-      allertComponent();
-      break;
-
-    default:
-      console.log("not working");
-
-      break;
-  }
-};
-
-listButtons.forEach((button, index) => {
-  button.addEventListener("click", (e) => {
-    componentsContainers.forEach((container) => {
-      container.classList.remove("components__item--active");
-    });
-
-    listButtons.forEach((button) => {
-      button.classList.remove("components__list-btn--active");
-    });
-
-    e.target.classList.add("components__list-btn--active");
-    componentsContainers[index].classList.add("components__item--active");
-
-    updateDisplay(index);
-  });
-});
-
-// const showButtonComponents = () => {
-//
-
-//   const deafultButtonContainer = document.createElement("div");
-//   deafultButtonContainer.classList.add("components__deafault-container");
-//   const defaultTitle = document.createElement("h2");
-//   defaultTitle.classList.add("components__deafault-title");
-//   const defaultButton = document.createElement("button");
-//   defaultButton.classList.add("components__deafault-btn");
-//   deafultButtonContainer.append(defaultTitle, defaultButton);
-
-//   const hoverButtonContainer = document.createElement("div");
-//   hoverButtonContainer.classList.add("components__hover-container");
-//   const hoverTitle = document.createElement("h2");
-//   hoverTitle.classList.add("components__hover-title");
-//   const hoverButton = document.createElement("button");
-//   hoverButton.classList.add("components__hover-button");
-//   hoverButtonContainer.append(hoverTitle, hoverButton);
-
-//   const disableButtonContainer = document.createElement("div");
-//   disableButtonContainer.classList.add("components__disable-container");
-//   const disableTitle = document.createElement("h2");
-//   disableTitle.classList.add("components__disable-title");
-//   const disableButton = document.createElement("button");
-//   disableButton.classList.add("components__disable-button");
-//   disableButtonContainer.append(disableTitle, disableButton);
-
-//   buttonsContainer.append(
-//     deafultButtonContainer,
-//     hoverButtonContainer,
-//     disableButtonContainer
-//   );
+//     break;
+// }
 // };
 
+// const showButtonComponents = () => {
+//   const states = ["dedault", "hover", "disabled", "active"];
+
+//   states.forEach((state) => {
+//     const buttonContainer = document.createElement("div");
+//     buttonContainer.classList.add(`components__${state}-container`);
+
+//     const buttonTitle = document.createElement("h2");
+//     buttonTitle.classList.add(`components__${state}-title`);
+//     buttonTitle.textContent = `Button displayed in ${state} State`;
+
+//     const buttonElements = document.createElement("button");
+//     buttonElements.classList.add(`components__${state}-btn`);
+//     buttonElements.textContent = "click!";
+
+//     if (state === "disabled") {
+//       buttonElements.disabled = true;
+//     }
+
+//     buttonContainer.append(buttonTitle, buttonElements);
+//     const buttonsContainer = document.querySelector(".components__buttons");
+//     buttonsContainer.append(buttonContainer);
+//   });
+// };
+
+// const showAlertComponents = () => {
+//   const states = ["Success", "Warning", "Error", "Info"];
+
+//   states.forEach((state) => {
+//     const alertContainer = document.createElement("div");
+//     alertContainer.classList.add(
+//       `components__${state.toLowerCase()}-container`
+//     );
+
+//     const alertTtile = document.createElement("h2");
+//     alertTtile.classList.add(`components__${state.toLowerCase()}-title`);
+//     alertTtile.textContent = `Alert displayed in ${state} state:`;
+
+//     const alertElement = document.createElement("div");
+//     alertElement.classList.add(`components__${state.toLowerCase()}-alert`);
+//     const alertMessage = document.createElement("p");
+//     alertMessage.textContent = `This is an example of ${state} alert`;
+//     const alertCloseButton = document.createElement("span");
+
+//     alertCloseButton.classList.add(`components__alert-close-btn`);
+
+//     alertCloseButton.textContent = "X";
+
+//     alertCloseButton.addEventListener("click", () => {
+//       alertElement.classList.add("fade-out");
+//       setTimeout(() => alertElement.remove(), 2000);
+//     });
+
+//     alertContainer.append(alertTtile, alertElement);
+//     alertElement.append(alertMessage, alertCloseButton);
+
+//     const alertsConatiner = document.querySelector(".components__alerts");
+//     alertsConatiner.append(alertContainer);
+
+//     if (state === "Success") {
+//     }
+//   });
+// };
+
+// const showToggleSwitchComponents = () => {
+//   const states = ["Default", "Disable"];
+
+//   states.forEach((state) => {
+//     const toggleContainers = document.createElement("div");
+//     toggleContainers.classList.add(
+//       `components__toggle-switch-${state}-container`
+//     );
+//     const toggleTitle = document.createElement("h2");
+//     toggleTitle.classList.add(`components__toggle-switch-${state}-title`);
+
+//     const toggleElementContainer = document.createElement("div");
+//     toggleElementContainer.classList.add(
+//       `components__toggle-switch-${state}-elment-container`
+//     );
+//     const toggleLabel = document.createElement("label");
+//     const toggleInput = document.createElement("input");
+//     toggleInput.type = "checkbox";
+//     const toggleSwitchButton = document.createElement("span");
+
+//     toggleContainers.append(toggleTitle, toggleElementContainer);
+//     toggleElementContainer.append(toggleLabel, toggleInput, toggleSwitchButton);
+
+//     const togglesConatiner = document.querySelector(
+//       ".components__toggle-switch"
+//     );
+//     togglesConatiner.append(toggleContainers);
+//   });
+// };
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
 //
 // const togglesConatiner = document.querySelector(".components__toggle-switch");
 // const tooltipsContainer = document.querySelector(".components__tooltips");

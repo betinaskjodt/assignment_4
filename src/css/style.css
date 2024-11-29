@@ -23,7 +23,7 @@ header {
 main {
   width: 100%;
   height: 80vh;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
 
   display: flex;
   justify-content: center;
@@ -31,8 +31,8 @@ main {
 }
 
 .components {
-  padding: var(--spacing-medium) 0;
-  width: 90%;
+  padding: var(--spacing-medium) var(--spacing-small);
+  width: 100%;
   height: inherit;
   display: flex;
   justify-content: space-between;
@@ -43,9 +43,9 @@ main {
   flex-basis: 25%;
 }
 
-.components__show-container {
+.components__container-wraper {
   flex-grow: 1;
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
 }
 
 .components__list {
@@ -73,16 +73,16 @@ main {
   transition: background-color 0.5s linear;
 }
 
-/* .components__list-item button:focus {
-  transform: scale(0.9);
-  transition: transform 0s linear;
-} */
-
-.components__item {
-  display: none;
+.components__container {
+  /* display: none; */
 }
 
-.components__item--active {
+.components__container--active {
   display: block;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: var(--spacing-medium);
 }
