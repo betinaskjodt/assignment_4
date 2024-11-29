@@ -1,0 +1,35 @@
+.components__accordion-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: var(--spacing-medium);
+}
+
+.components__accordion-title-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: var(--spacing-small);
+  background-color: var(--tertiary-color);
+}
+
+.components__accordion-toggle-button {
+  border: none;
+  background-color: transparent;
+}
+
+.components__accordion-toggle-icon {
+  transform: rotate(180deg);
+  transition: transform 2s linear;
+}
+
+.components__accordion-content-container {
+  width: 50%;
+  padding: var(--spacing-small);
+  border: 1px solid black;
+}

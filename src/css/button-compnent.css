@@ -1,43 +1,33 @@
-.components__buttons {
+.components__button-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding: var(--spacing-medium);
 }
 
-.components__dedault-container,
-.components__hover-container,
-.components__disabled-container,
-.components__active-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-small);
-  padding: var(--spacing-small) var(--spacing-xlarge);
-  border: 8px double var(--text-color-light);
-}
-
-.components__dedault-btn,
-.components__hover-btn,
-.components__disabled-btn,
-.components__active-btn {
+.components__button {
   width: 90px;
   height: 50px;
-}
-
-.components__hover-btn,
-.components__disabled-btn,
-.components__active-btn {
-  border-radius: 20px;
+  padding: var(--spacing-) var(--spacing-xlarge);
   font-size: var(--font-size-medium);
+  border-radius: 10px;
   background-color: var(--primary-color);
+  cursor: pointer;
 }
 
-.components__hover-btn:hover {
+.components__button--hover {
+  transition: background-color 0.5s linear, box-shadow 0.5s linear;
+}
+
+.components__button--hover:hover {
   background-color: var(--hover-color);
   box-shadow: rgba(255, 255, 255, 0.389) 0px 5px 10px;
   transition: background-color 0.5s linear, box-shadow 0.5s linear;
 }
 
-.components__active-btn:active {
+.components__button--disabled {
+  cursor: not-allowed;
+}
+
+.components__button--active:active {
   background-color: var(--hover-color);
 }

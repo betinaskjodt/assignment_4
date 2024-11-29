@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/button-compnent.css" />
     <link rel="stylesheet" href="./css/alert-component.css" />
+    <link rel="stylesheet" href="./css/toggle-switch-component.css" />
+    <link rel="stylesheet" href="./css/card-components.css" />
+    <link rel="stylesheet" href="./css/accordions-component.css" />
     <title>Design System with Interactive Components</title>
   </head>
   <body>
@@ -46,35 +49,291 @@
           </ul>
         </div>
 
-        <div class="components__show-container">
-          <!-- buttons components -->
+        <div class="components__container-wraper">
+          <!-- buttons componets -->
           <div
-            class="components__item components__buttons components__item--active"
-          ></div>
+            class="components__container components__container--active components__buttons-container"
+          >
+            <div class="components__button-container">
+              <div class="components__button-text-wraper">
+                <h3 class="components__button-title">Default</h3>
+                <p class="components__button-description">
+                  This is a button in default state:
+                </p>
+              </div>
+              <button class="components__button">click!</button>
+            </div>
 
-          <!-- allerts components -->
-          <div class="components__item components__alerts">alerts</div>
+            <div class="components__button-container">
+              <div class="components__button-text-wraper">
+                <h3 class="components__button-title">Hover</h3>
+                <p class="components__button-description">
+                  This is a button in hover state:
+                </p>
+              </div>
+              <button class="components__button components__button--hover">
+                click!
+              </button>
+            </div>
 
-          <div class="components__item components__toggle-switch">
-            toggle switch
+            <div class="components__button-container">
+              <div class="components__button-text-wraper">
+                <h3 class="components__button-title">Disabled</h3>
+                <p class="components__button-description">
+                  This is a button in disabled state:
+                </p>
+              </div>
+              <button
+                class="components__button components__button--disabled"
+                disabled
+              >
+                click!
+              </button>
+            </div>
+
+            <div class="components__button-container">
+              <div class="components__button-text-wraper">
+                <h3 class="components__button-title">Active</h3>
+                <p class="components__button-description">
+                  This is a button in active state:
+                </p>
+              </div>
+              <button class="components__button components__button--active">
+                click!
+              </button>
+            </div>
           </div>
 
-          <!-- tooltips components -->
-          <div class="components__item components__tooltips">tooltips</div>
+          <!-- alerts components -->
+          <div class="components__container components__alerts-container">
+            <div class="components__alert-container">
+              <h3 class="components__alert-title">Succsess</h3>
+              <p class="components__alert-description">
+                Below is a success alert.
+              </p>
+              <div class="components__alert components__success-alert">
+                <p class="components__alert-message">
+                  Success! Indicates a successful or positive action.
+                </p>
+                <span class="components__alert-button">x</span>
+              </div>
+            </div>
+
+            <div class="components__alert-container">
+              <h3 class="components__alert-title">Warning</h3>
+              <p class="components__alert-description">
+                Below is a warning alert.
+              </p>
+              <div class="components__alert components__warning-alert">
+                <p class="components__alert-message">
+                  Warning! Indicates a warning that potentially might have a
+                  negative effect.
+                </p>
+                <span class="components__alert-button">x</span>
+              </div>
+            </div>
+
+            <div class="components__alert-container">
+              <h3 class="components__alert-title">Error</h3>
+              <p class="components__alert-description">
+                Below is a error alert.
+              </p>
+              <div class="components__alert components__error-alert">
+                <p class="components__alert-message">
+                  Error! Indicates a error and signals need for closeup look.
+                </p>
+                <span class="components__alert-button">x</span>
+              </div>
+            </div>
+
+            <div class="components__alert-container">
+              <h3 class="components__alert-title">Info</h3>
+              <p class="components__alert-description">
+                Below is a info alert.
+              </p>
+              <div class="components__alert components__info-alert">
+                <p class="components__alert-message">
+                  Info! Indicates a neutral informative change or action.
+                </p>
+                <span class="components__alert-button">x</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- toggle switch componets -->
+          <div
+            class="components__container components__toggle-switches-container components__container--active"
+          >
+            <div class="components__toggle-switch-container">
+              <h3 class="components__toggle-switch-title">On/Off</h3>
+              <p class="components__toggle-switch-description">
+                This is an example off on/off toggle state
+              </p>
+              <div
+                class="components__toggle-switch components__toggle-switch-on-off"
+              >
+                <span class="components__toggle-switch-text">on/off</span>
+                <input
+                  class="components__toggle-switch-input"
+                  type="checkbox"
+                  name="toggle"
+                  id="reactive-toggle"
+                />
+                <label
+                  for="reactive-toggle"
+                  class="components__toggle-switch-label"
+                ></label>
+              </div>
+            </div>
+
+            <div class="components__toggle-switch-container">
+              <h3 class="components__toggle-switch-title">Disabled</h3>
+              <p class="components__toggle-switch-description">
+                This is an example disabled on toggle state
+              </p>
+              <div
+                class="components__toggle-switch components__toggle-switch-disabled"
+              >
+                <span class="components__toggle-switch-text">disabled</span>
+                <input
+                  class="components__toggle-switch-input"
+                  type="checkbox"
+                  name="toggle"
+                  id="reactive-toggle"
+                  disabled
+                />
+                <label
+                  for="reactive-toggle"
+                  class="components__toggle-switch-label"
+                ></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- tooltips componets -->
+          <div class="components__container components__tooltips">
+            <div class="components__tooltip-container">
+              <h3 class="components__tooltip-title">Hover</h3>
+
+              <div class="components__tooltip">
+                Hover over this text
+                <span class="components__tooltip-text">some information</span>
+              </div>
+            </div>
+
+            <div class="components__tooltip-container">
+              <h3 class="components__tooltip-title">Focus</h3>
+
+              <div class="components__tooltip">
+                Hover over this text
+                <span class="components__tooltip-text">some information</span>
+              </div>
+            </div>
+          </div>
 
           <!-- cards components -->
-          <div class="components__item components__cards">cards</div>
+          <div class="components__container components__cards">
+            <div class="components__cards-container">
+              <h3 class="components__cards-title">Cards in different states</h3>
+              <p class="components__cards-description">
+                iteract with cards to see the different states of them
+              </p>
+              <div class="components__card-wraper">
+                <div class="components__card components__card--default">
+                  <img
+                    class="components__card-img"
+                    src="./assets/images/pexels-photo-1522186.webp"
+                    alt="image of blue car"
+                  />
+                  <h3 class="components__card-title">Default state</h3>
+                  <p class="components__card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Fuga, nam.
+                  </p>
+                  <a class="components__card-link" href="#">link</a>
+                </div>
 
-          <!-- accordians components -->
-          <div class="components__item components__accordions">accordions</div>
+                <div class="components__card components__card--hover">
+                  <img
+                    class="components__card-img"
+                    src="./assets/images/pexels-photo-1522186.webp"
+                    alt="image of blue car"
+                  />
+                  <h3 class="components__card-title">Hover state</h3>
+                  <p class="components__card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Fuga, nam.
+                  </p>
+                  <a class="components__card-link" href="#">link</a>
+                </div>
 
-          <!-- toast notiification components -->
-          <div class="components__item components__toast">
-            toast notification
+                <div class="components__card components__card--active">
+                  <img
+                    class="components__card-img"
+                    src="./assets/images/pexels-photo-1522186.webp"
+                    alt="image of blue car"
+                  />
+                  <h3 class="components__card-title">Active state</h3>
+                  <p class="components__card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Fuga, nam.
+                  </p>
+                  <a class="components__card-link" href="#">link</a>
+                </div>
+              </div>
+            </div>
           </div>
 
+          <!-- accordions component -->
+          <div class="components__container components__accordions">
+            <div class="components__accordion-container">
+              <div
+                class="components__accordion-title-container components__accordion-title-container--expanded"
+              >
+                <h3 class="components__accordion-title">accordion 1</h3>
+                <button class="components__accordion-toggle-button">
+                  <img
+                    class="components__accordion-toggle-icon"
+                    src="./assets/icons/arrow_down.svg"
+                    alt="image of arrow"
+                  />
+                </button>
+              </div>
+              <div class="components__accordion-content-container">
+                <p class="components__accordion-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Saepe. Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Cupiditate, dignissimos.
+                </p>
+              </div>
+              <div
+                class="components__accordion-title-container components__accordion-title-container---collapsed"
+              >
+                <h3 class="components__accordion-title">accordion 2</h3>
+                <button class="components__accordion-toggle-button">
+                  <img
+                    class="components__accordion-toggle-icon"
+                    src="./assets/icons/arrow_down.svg"
+                    alt="image of arrow"
+                  />
+                </button>
+              </div>
+              <div class="components__accordion-content-container">
+                <p class="components__accordion-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Saepe, cumque. Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Ipsam molestiae neque assumenda iste. Est
+                  perspiciatis cum nemo quasi praesentium saepe!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- toast component -->
+          <div class="components__container components__toast">toast</div>
+
           <!-- badger components -->
-          <div class="components__item components__badger">badger</div>
+          <div class="components__container components__badgers">badgers</div>
         </div>
       </section>
     </main>
