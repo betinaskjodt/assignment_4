@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/tooltips-componets.css" />
     <link rel="stylesheet" href="./css/card-components.css" />
     <link rel="stylesheet" href="./css/accordions-component.css" />
+    <link rel="stylesheet" href="./css/toast-component.css" />
 
     <title>Design System with Interactive Components</title>
   </head>
@@ -349,7 +350,70 @@
           </div>
 
           <!-- toast component -->
-          <div class="components__container components__toast">toast</div>
+          <div
+            class="components__container components__toasts-container components__container--active"
+          >
+            <div class="components__toasts-description-container">
+              <h3 class="components__toasts-description-title">Toast</h3>
+              <p class="components__toasts-description">
+                Toast are often used as popups to show a message at the bottom
+                of the screen. Click on the button to show the toast message.
+              </p>
+            </div>
+            <div class="components__toasts-buttons-container">
+              <div class="components__toast-button-container">
+                <p class="components__toast-button-description">
+                  when you click on this button a messeage will appeare with a
+                  close button to make it go away.
+                </p>
+                <button
+                  class="components__toast-button components__toasts-button--appearing"
+                >
+                  click!
+                </button>
+              </div>
+
+              <div class="components__toast-button-container">
+                <p class="components__toast-button-description">
+                  When you click on this button a message a timed message will
+                  appeare. disapear after 3 seconds.
+                </p>
+                <button
+                  class="components__toast-button components__toasts-button--timed"
+                >
+                  click!
+                </button>
+              </div>
+
+              <div class="components__toast-button-container">
+                <p class="components__toast-button-description">
+                  When you click on this button a warning message will appeare.
+                </p>
+                <button
+                  class="components__toast-button components__toasts-button--warning"
+                >
+                  click!
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="components__toast-message components__toast-message--appearing"
+            >
+              Toast message!
+              <button class="components__toast-message-close-button">x</button>
+            </div>
+            <div
+              class="components__toast-message components__toast-message--timed"
+            >
+              Toast message!
+            </div>
+            <div
+              class="components__toast-message components__toast-message--warning"
+            >
+              Toast message!
+            </div>
+          </div>
 
           <!-- badger components -->
           <div class="components__container components__badgers">badgers</div>
