@@ -1,0 +1,80 @@
+.components__tooltip-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  padding: var(--spacing-small) var(--spacing-large);
+}
+
+.components__tooltip-title {
+  padding: var(--spacing-small) var(--spacing-medium);
+}
+
+/* creating the tooltip with style */
+.components__tooltip {
+  position: relative;
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+}
+
+.components__tooltip-button {
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  border: 1px solid var(--text-color-dark);
+  position: relative;
+  display: inline-block;
+  margin: var(--spacing-small) var(--spacing-medium);
+}
+
+.components__tooltip .components__tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  text-align: center;
+  border-radius: 5px;
+  padding: var(--spacing-xsmall) 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 90%;
+  left: 7%;
+  margin-left: -60px;
+}
+
+.components__tooltip-button .components__tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  text-align: center;
+  border-radius: 5px;
+  padding: var(--spacing-xsmall) 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 130%;
+  left: 40%;
+  margin-left: -100px;
+}
+
+.components__tooltip .components__tooltip-text::after,
+.components__tooltip-button .components__tooltip-text::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid;
+  border-color: var(--secondary-color) transparent transparent transparent;
+}
+
+.components__tooltip:hover .components__tooltip-text {
+  visibility: visible;
+}
+
+.components__tooltip-button:focus .components__tooltip-text {
+  visibility: visible;
+}

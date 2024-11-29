@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./css/button-compnent.css" />
     <link rel="stylesheet" href="./css/alert-component.css" />
     <link rel="stylesheet" href="./css/toggle-switch-component.css" />
+    <link rel="stylesheet" href="./css/tooltips-componets.css" />
     <link rel="stylesheet" href="./css/card-components.css" />
     <link rel="stylesheet" href="./css/accordions-component.css" />
+
     <title>Design System with Interactive Components</title>
   </head>
   <body>
@@ -162,12 +164,13 @@
 
           <!-- toggle switch componets -->
           <div
-            class="components__container components__toggle-switches-container components__container--active"
+            class="components__container components__toggle-switches-container"
           >
             <div class="components__toggle-switch-container">
               <h3 class="components__toggle-switch-title">On/Off</h3>
               <p class="components__toggle-switch-description">
-                This is an example off on/off toggle state
+                This is an example off an on/off toggle state. click on it to
+                make it react.
               </p>
               <div
                 class="components__toggle-switch components__toggle-switch-on-off"
@@ -189,7 +192,8 @@
             <div class="components__toggle-switch-container">
               <h3 class="components__toggle-switch-title">Disabled</h3>
               <p class="components__toggle-switch-description">
-                This is an example disabled on toggle state
+                This is an example disabled on toggle state. it will not
+                interact when you press on it.
               </p>
               <div
                 class="components__toggle-switch components__toggle-switch-disabled"
@@ -211,12 +215,14 @@
           </div>
 
           <!-- tooltips componets -->
-          <div class="components__container components__tooltips">
+          <div
+            class="components__container components__tooltips components__container--active"
+          >
             <div class="components__tooltip-container">
               <h3 class="components__tooltip-title">Hover</h3>
 
               <div class="components__tooltip">
-                Hover over this text
+                Hover over this text.
                 <span class="components__tooltip-text">some information</span>
               </div>
             </div>
@@ -224,10 +230,10 @@
             <div class="components__tooltip-container">
               <h3 class="components__tooltip-title">Focus</h3>
 
-              <div class="components__tooltip">
-                Hover over this text
+              <button class="components__tooltip-button">
+                Click her
                 <span class="components__tooltip-text">some information</span>
-              </div>
+              </button>
             </div>
           </div>
 
