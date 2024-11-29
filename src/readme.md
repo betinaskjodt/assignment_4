@@ -19,7 +19,7 @@ https://www.w3schools.com/howto/howto_js_alert.asp
 
 to find out how toggleswitch are made:
 https://www.w3schools.com/howto/howto_css_switch.asp
-
-how to make toggle button:
-https://www.w3schools.com/howto/howto_css_switch.asp
 https://www.educative.io/answers/how-to-create-a-toggle-switch-with-css
+
+how to make tooltip:
+https://www.w3schools.com/css/css_tooltip.asp
