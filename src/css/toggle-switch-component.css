@@ -41,7 +41,7 @@
 }
 
 .components__toggle-switch-input:checked + .components__toggle-switch-label {
-  background-color: var(--alert-color-succsess);
+  background-color: var(--color-succsess);
 }
 
 .components__toggle-switch-input:checked

@@ -182,10 +182,10 @@
                   class="components__toggle-switch-input"
                   type="checkbox"
                   name="toggle"
-                  id="reactive-toggle"
+                  id="active-toggle"
                 />
                 <label
-                  for="reactive-toggle"
+                  for="active-toggle"
                   class="components__toggle-switch-label"
                 ></label>
               </div>
@@ -205,11 +205,11 @@
                   class="components__toggle-switch-input"
                   type="checkbox"
                   name="toggle"
-                  id="reactive-toggle"
+                  id="inactive-toggle"
                   disabled
                 />
                 <label
-                  for="reactive-toggle"
+                  for="inactive-toggle"
                   class="components__toggle-switch-label"
                 ></label>
               </div>
@@ -220,19 +220,32 @@
           <div class="components__container components__tooltips">
             <div class="components__tooltip-container">
               <h3 class="components__tooltip-title">Hover</h3>
+              <p class="components__tooltip-descripton">
+                when you hover over the text below the tooltip message will
+                appear
+              </p>
 
               <div class="components__tooltip">
-                Hover over this text.
-                <span class="components__tooltip-text">some information</span>
+                Some randon text.
+                <span class="components__tooltip-text"
+                  >this is the tooltip</span
+                >
               </div>
             </div>
 
             <div class="components__tooltip-container">
               <h3 class="components__tooltip-title">Focus</h3>
+              <p class="components__tooltip-descripton">
+                when you click on the button below the tooltip message will
+                appear. This is another state in focus, wich responds with click
+                respons.
+              </p>
 
               <button class="components__tooltip-button">
                 Click her
-                <span class="components__tooltip-text">some information</span>
+                <span class="components__tooltip-text"
+                  >this is the tooltip</span
+                >
               </button>
             </div>
           </div>
@@ -304,9 +317,7 @@
               </div>
 
               <div class="components__accordion">
-                <div
-                  class="components__accordion-title-container components__accordion-title-container--expanded"
-                >
+                <div class="components__accordion-title-container">
                   <h3 class="components__accordion-title">accordion 1</h3>
                   <button class="components__accordion-toggle-button">
                     <img
@@ -320,15 +331,17 @@
                   <p class="components__accordion-content">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Saepe. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Cupiditate, dignissimos.
+                    elit. Cupiditate, dignissimos. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ratione alias quibusdam
+                    officiis delectus velit facilis aliquam quaerat animi
+                    quisquam dolorum. Inventore sequi repellendus, corporis
+                    temporibus fuga id officiis aut aliquid!
                   </p>
                 </div>
               </div>
 
               <div class="components__accordion">
-                <div
-                  class="components__accordion-title-container components__accordion-title-container---collapsed"
-                >
+                <div class="components__accordion-title-container">
                   <h3 class="components__accordion-title">accordion 2</h3>
                   <button class="components__accordion-toggle-button">
                     <img
@@ -351,7 +364,7 @@
           </div>
 
           <!-- toast component -->
-          <div class="components__container components__toasts-container">
+          <div class="components__container components__toasts-containers">
             <div class="components__toasts-description-container">
               <h3 class="components__toasts-description-title">Toast</h3>
               <p class="components__toasts-description">
@@ -359,32 +372,45 @@
                 of the screen. Click on the button to show the toast message.
               </p>
             </div>
-            <div class="components__toasts-buttons-container">
-              <div class="components__toast-button-container">
+            <div class="components__toast-containers">
+              <div class="components__toast-container">
                 <p class="components__toast-button-description">
                   when you click on this button a messeage will appeare with a
-                  close button to make it go away.
+                  close button. Click on the x to close the message.
                 </p>
                 <button
                   class="components__toast-button components__toasts-button--appearing"
                 >
                   click!
                 </button>
+                <div
+                  class="components__toast-message components__toast-message--appearing"
+                >
+                  Toast message!
+                  <button class="components__toast-message-close-button">
+                    x
+                  </button>
+                </div>
               </div>
 
-              <div class="components__toast-button-container">
+              <div class="components__toast-container">
                 <p class="components__toast-button-description">
-                  When you click on this button a message a timed message will
-                  appeare. disapear after 3 seconds.
+                  When you click on this button a timed message will appeare.
+                  The message disapear after 3 seconds.
                 </p>
                 <button
                   class="components__toast-button components__toasts-button--timed"
                 >
                   click!
                 </button>
+                <div
+                  class="components__toast-message components__toast-message--timed"
+                >
+                  Toast message!
+                </div>
               </div>
 
-              <div class="components__toast-button-container">
+              <div class="components__toast-container">
                 <p class="components__toast-button-description">
                   When you click on this button a warning message will appeare.
                 </p>
@@ -393,24 +419,12 @@
                 >
                   click!
                 </button>
+                <div
+                  class="components__toast-message components__toast-message--warning"
+                >
+                  Toast message!
+                </div>
               </div>
-            </div>
-
-            <div
-              class="components__toast-message components__toast-message--appearing"
-            >
-              Toast message!
-              <button class="components__toast-message-close-button">x</button>
-            </div>
-            <div
-              class="components__toast-message components__toast-message--timed"
-            >
-              Toast message!
-            </div>
-            <div
-              class="components__toast-message components__toast-message--warning"
-            >
-              Toast message!
             </div>
           </div>
 

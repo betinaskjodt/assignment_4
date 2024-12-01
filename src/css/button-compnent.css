@@ -15,13 +15,13 @@
 }
 
 .components__button--hover {
-  transition: background-color 0.5s linear, box-shadow 0.5s linear;
+  transition: background-color 0.3s linear, box-shadow 0.3s linear;
 }
 
 .components__button--hover:hover {
   background-color: var(--hover-color);
-  box-shadow: rgba(255, 255, 255, 0.389) 0px 5px 10px;
-  transition: background-color 0.5s linear, box-shadow 0.5s linear;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 5px 10px;
+  transition: background-color 0.3s linear, box-shadow 0.3s linear;
 }
 
 .components__button--disabled {
@@ -29,5 +29,5 @@
 }
 
 .components__button--active:active {
-  background-color: var(--hover-color);
+  background-color: var(--color-succsess);
 }
