@@ -1,4 +1,4 @@
-.components__toasts-container {
+.components__toasts-containers {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -13,8 +13,8 @@
   gap: var(--spacing-medium);
 }
 
-.components__toasts-buttons-container {
-  width: 100%;
+.components__toast-containers {
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,8 @@
   padding: 0 var(--spacing-large);
 }
 
-.components__toast-button-container {
+.components__toast-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
@@ -45,16 +46,26 @@
   transition: background-color 0.2s linear, color 0.2s linear;
 }
 
-.components__toast-message--appearing {
+.components__toast-message {
   border: 1px solid black;
   width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-small) var(--spacing-medium);
-  background-color: var(--text-color-dark);
-  opacity: 0.8;
-  color: var(--text-color-light);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  visibility: hidden;
+}
+
+.components__toast-message--active {
+  visibility: visible;
+}
+
+.components__toast-message--appearing {
+  background-color: var(--tertiary-color);
+  color: var(--text-color-dark);
   border-radius: 10px;
 }
 
@@ -62,37 +73,20 @@
   font-size: var(--font-size-large);
   background-color: transparent;
   border: none;
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
 }
 
 .components__toast-message-close-button:hover {
-  color: var(--hover-color);
+  color: var(--text-color-light);
 }
 
 .components__toast-message--timed {
-  border: 1px solid black;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--spacing-small);
   background-color: var(--text-color-dark);
-  opacity: 0.8;
   color: var(--text-color-light);
   border-radius: 10px;
 }
 
 .components__toast-message--warning {
-  border: 1px solid black;
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--spacing-small);
-  background-color: var(--alert-color-warning);
+  background-color: var(--color-warning);
   border-radius: 10px;
-}
-
-.components__toast-message {
-  display: none;
 }

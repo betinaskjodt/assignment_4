@@ -1,5 +1,5 @@
 .components__tooltip-container {
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
 
@@ -7,8 +7,10 @@
   padding: var(--spacing-small) var(--spacing-large);
 }
 
-.components__tooltip-title {
+.components__tooltip-title,
+.components__tooltip-descripton {
   padding: var(--spacing-small) var(--spacing-medium);
+  line-height: 1.6;
 }
 
 /* creating the tooltip with style */

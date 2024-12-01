@@ -23,10 +23,11 @@
 /* alerts button styling */
 .components__alert-button {
   cursor: pointer;
+  font-size: var(--font-size-large);
 }
 
 .components__alert-button:hover {
-  color: var(--text-color-dark);
+  color: var(--text-color-light);
 }
 
 /* styling alert in different states */
@@ -55,10 +56,5 @@
 
 .fade-out {
   opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 0.5s ease;
 }

@@ -24,7 +24,7 @@
 }
 
 .components__accordion-title-container {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,15 +36,28 @@
 .components__accordion-toggle-button {
   border: none;
   background-color: transparent;
+  transform: rotate(180deg);
+  transition: transform 0.3s linear;
 }
 
-.components__accordion-toggle-icon {
-  transform: rotate(180deg);
-  transition: transform 2s linear;
+.components__accordion-toggle-button--active {
+  transform: rotate(0deg);
+  transition: transform 0.3s linear;
+}
+
+.components__accordion-content {
+  width: 100%;
+  border: 1px solid black;
+  padding: var(--spacing-small);
+  line-height: 1.6;
 }
 
 .components__accordion-content-container {
+  visibility: hidden;
+}
+
+.components__accordion-content-container--active {
   width: 50%;
-  padding: var(--spacing-small);
-  border: 1px solid black;
+  visibility: visible;
+  background-color: gray;
 }
