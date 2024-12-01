@@ -23,7 +23,6 @@
 /* alerts button styling */
 .components__alert-button {
   cursor: pointer;
-  /* color: var(--text-color-light); */
 }
 
 .components__alert-button:hover {
@@ -32,24 +31,24 @@
 
 /* styling alert in different states */
 .components__success-alert {
-  background-color: var(--alert-color-succsess);
+  background-color: var(--color-succsess);
   font-size: var(--font-size-medium);
 }
 
 .components__warning-alert {
-  background-color: var(--alert-color-warning);
+  background-color: var(--color-warning);
   font-size: var(--font-size-medium);
   color: black;
 }
 
 .components__error-alert {
-  background-color: var(--alert-color-error);
+  background-color: var(--color-error);
   font-size: var(--font-size-medium);
   color: black;
 }
 
 .components__info-alert {
-  background-color: var(--alert-color-info);
+  background-color: var(--color-info);
   font-size: var(--font-size-medium);
   color: black;
 }

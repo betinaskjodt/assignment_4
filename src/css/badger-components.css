@@ -1,0 +1,68 @@
+.components__badges-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.components__badges-description {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-small) var(--spacing-large);
+  gap: var(--spacing-small);
+}
+
+.components__badges-info {
+  line-height: 1.6;
+}
+
+.components__badge-container {
+  height: 50%;
+  padding: var(--spacing-small) var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.components__badge {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: var(--font-size-xsmall);
+  font-family: "Roboto-Bold";
+  text-transform: capitalize;
+  padding: var(--spacing-small);
+  margin-left: var(--spacing-large);
+}
+
+.components__badge--default {
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  background-color: lightgray;
+  color: var(--text-color-dark);
+}
+
+.components__badge--active {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
+.components__badge--active:active {
+  background-color: var(--color-succsess);
+  color: var(--text-color-dark);
+}
+
+.components__badge--info {
+  background-color: var(--color-info);
+  color: var(--text-color-dark);
+}
+
+.components__badge--hover {
+  background-color: var(--tertiary-color);
+  color: var(--text-color-dark);
+}
+
+.components__badge--hover:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
