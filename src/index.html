@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/card-components.css" />
     <link rel="stylesheet" href="./css/accordions-component.css" />
     <link rel="stylesheet" href="./css/toast-component.css" />
+    <link rel="stylesheet" href="./css/badger-components.css" />
 
     <title>Design System with Interactive Components</title>
   </head>
@@ -55,7 +56,7 @@
         <div class="components__container-wraper">
           <!-- buttons componets -->
           <div
-            class="components__container components__container--active components__buttons-container"
+            class="components__container components__buttons-container components__container--active"
           >
             <div class="components__button-container">
               <div class="components__button-text-wraper">
@@ -350,9 +351,7 @@
           </div>
 
           <!-- toast component -->
-          <div
-            class="components__container components__toasts-container components__container--active"
-          >
+          <div class="components__container components__toasts-container">
             <div class="components__toasts-description-container">
               <h3 class="components__toasts-description-title">Toast</h3>
               <p class="components__toasts-description">
@@ -416,7 +415,45 @@
           </div>
 
           <!-- badger components -->
-          <div class="components__container components__badgers">badgers</div>
+          <div class="components__container components__badges">
+            <div class="components__badges-container">
+              <div class="components__badges-description">
+                <h3 class="components__badges-title">Badges</h3>
+                <p class="components__badges-info">
+                  A badge is a small visual element often used to display
+                  statuses, notifications, counts, or labels. The different
+                  states of a badge in coding depend on its purpose, context,
+                  and design requirements. Here are common states and examples
+                </p>
+              </div>
+              <div class="components__badge-container">
+                <h1 class="components__badge-text">
+                  Random title text<span
+                    class="components__badge components__badge--default"
+                    >Badge default state</span
+                  >
+                </h1>
+                <h2 class="components__badge-text">
+                  Random title text<span
+                    class="components__badge components__badge--active"
+                    >Badge active state</span
+                  >
+                </h2>
+                <h3 class="components__badge-text">
+                  Random title text<span
+                    class="components__badge components__badge--info"
+                    >Badge information state</span
+                  >
+                </h3>
+                <h4 class="components__badge-text">
+                  Random title text<span
+                    class="components__badge components__badge--hover"
+                    >Badge hover/focus state</span
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
