@@ -18,7 +18,9 @@
     <title>Design System with Interactive Components</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>Design System with Interactive Components</h1>
+    </header>
 
     <main>
       <section class="components">
@@ -53,11 +55,9 @@
           </ul>
         </div>
 
-        <div class="components__container-wraper">
+        <div class="components__containers">
           <!-- buttons componets -->
-          <div
-            class="components__container components__buttons-container components__container--active"
-          >
+          <div class="components__container components__buttons-container">
             <div class="components__button-container">
               <div class="components__button-text-wraper">
                 <h3 class="components__button-title">Default</h3>
@@ -226,7 +226,7 @@
               </p>
 
               <div class="components__tooltip">
-                Some randon text.
+                Hover over this text.
                 <span class="components__tooltip-text"
                   >this is the tooltip</span
                 >
@@ -241,12 +241,14 @@
                 respons.
               </p>
 
-              <button class="components__tooltip-button">
-                Click her
-                <span class="components__tooltip-text"
-                  >this is the tooltip</span
-                >
-              </button>
+              <div class="components__tooltip-button-container">
+                <button class="components__tooltip-button">
+                  Click her
+                  <span class="components__tooltip-text"
+                    >this is the tooltip</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
 
@@ -472,7 +474,9 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>&copy; 2024</p>
+    </footer>
     <script src="./js/app.js"></script>
   </body>
 </html>

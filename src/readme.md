@@ -1,3 +1,17 @@
+# Design System Of Interactive Components
+
+Displaying a design system of 8 different components with different stages.
+
+## Description
+
+This project is a design system that shows 8 different componets displayed in different stages. all of them have atleast 2 stages.
+
+## Instalation
+
+To install the project locally, follow these steps:
+clone the repository:
+git clone https://github.com/betinaskjodt/assignment_4.git
+
 (Including a brief description of your project, link to
 the GitHub repository, and link for the Netlify deployment).
 

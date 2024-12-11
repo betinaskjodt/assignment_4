@@ -1,4 +1,6 @@
+/* DISPLAYING THE TOGGLE CONTENT */
 .components__toggle-switch-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
@@ -11,7 +13,7 @@
   align-items: center;
 }
 
-/* toggle switch element */
+/*  */
 .components__toggle-switch-input {
   display: none;
 }

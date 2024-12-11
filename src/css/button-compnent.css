@@ -1,12 +1,25 @@
-.components__button-container {
+/* DISPLAYING THE BUTTON COMPONENT */
+.components__buttons-container {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   padding: var(--spacing-medium);
 }
 
+.components__button-container {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xlarge);
+}
+
+/* STYLING THE BUTTONS */
 .components__button {
-  width: 90px;
-  height: 50px;
+  width: 6rem;
+  height: 3rem;
   padding: var(--spacing-) var(--spacing-xlarge);
   font-size: var(--font-size-medium);
   border-radius: 10px;
@@ -14,20 +27,24 @@
   cursor: pointer;
 }
 
+/* HOVER STATE */
 .components__button--hover {
-  transition: background-color 0.3s linear, box-shadow 0.3s linear;
+  transition: background-color 0.2s linear, box-shadow 0.2s linear;
 }
 
 .components__button--hover:hover {
   background-color: var(--hover-color);
-  box-shadow: rgba(255, 255, 255, 0.4) 0px 5px 10px;
-  transition: background-color 0.3s linear, box-shadow 0.3s linear;
+  box-shadow: rgba(112, 202, 209, 0.8) 5px 10px 15px;
+  transition: background-color 0.2s linear, box-shadow 0.2s linear;
 }
 
+/* DISABLE STATE */
 .components__button--disabled {
   cursor: not-allowed;
 }
 
+/* ACTIVE STATE */
 .components__button--active:active {
   background-color: var(--color-succsess);
+  color: var(--text-color-light);
 }
