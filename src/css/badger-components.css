@@ -1,3 +1,4 @@
+/* styles for displaying content */
 .components__badges-container {
   height: 100%;
   display: flex;
@@ -24,6 +25,12 @@
   justify-content: space-between;
 }
 
+/* styles for tiles */
+.components__badge-text {
+  padding: var(--spacing-medium);
+}
+
+/* styles for badges */
 .components__badge {
   display: inline-block;
   border: 1px solid black;
