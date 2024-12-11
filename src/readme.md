@@ -38,8 +38,7 @@ If you have any questions or suggestions, feel free to reach out to me at [betin
 
 ## netlify
 
-(Including a brief description of your project, link to
-the GitHub repository, and link for the Netlify deployment).
+https://675a26e0259cd94d3324579f--tangerine-sunshine-a09ac4.netlify.app/
 
 ## Sources
 
