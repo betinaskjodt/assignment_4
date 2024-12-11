@@ -12,19 +12,37 @@ To install the project locally, follow these steps:
 clone the repository:
 git clone https://github.com/betinaskjodt/assignment_4.git
 
+cd assignment_4
+open the index.html file in your web browser to get started.
+
+No dependencies or build tools are required for this project, as it is a front-end project of design system.
+
+## Usage
+
+- open the index.html file in your browser.
+- Navigate through the side list of on the page by clicking one of the buttons.
+- interact with the compoments as you like to see the states.
+
+## Features
+
+- A design system with 8 different components displyed atleast in 2 different stages.
+- A navigation list of buttons to display the different components
+
+## License
+
+This project is licensed under the MIT License - see the License file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to me at [betina_horthe@hotmail.com]
+
+## netlify
+
 (Including a brief description of your project, link to
 the GitHub repository, and link for the Netlify deployment).
 
-- buttons
-- Alerts
-- Toggle switch
-- Tooltips
-- Cards
-- Accordians
-- Toast notification
-- Badger
+## Sources
 
-kilder:
 to interact with button in list and display the components by using class active:
 https://kristiania.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4a078d3-98bf-4bd3-aea8-b22e01050ebc
 
